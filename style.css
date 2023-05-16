@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Roboto', sans-serif;
+scroll-behavior:smooth ;
+}
+/* scrollbar */
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    width: 5px;
+    background-color: rgb(177, 173, 173);
+    border-radius:  6px;
+}
+body{
+    background-color: #EAE2D2; /*tres jolie couleur*/
+}
+ul{
+    list-style: none; /*enlever les  point */
+}
+a{
+    text-decoration: 0;
+    color: black;
+    font-weight: 400px;
+    font-size : 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+header{
+    display: flex; /*se connecter et inscrire vont s'aligner en haut  de domicile*/
+    align-items: center; /* il vont descendre au milieux*/
+    justify-content: space-between; /* ça les a espacer */
+    margin: 0 8%;
+    padding: 20px 0;
+    border-bottom: 1px solid #000; /*cree une ligne noir */
+}
+.header_logo{
+    font-weight: 500;
+}
+.header_menu{
+    display: flex; /*les a aligner en ligne */
+}
+.header_menu a{
+    margin-left: 20px; /*les espaces de 20px*/
+    padding-bottom: 3px;
+    position: relative;
+}
+.header_menu  a:after{
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: #000;
+    transition: 0.5 ease-out;
+}
+.header_menu  a:hover:after{
+    width: 100%;
+}
+.header_buttons a{
+    margin-left: 20px;
+}
+.header_buttons a:last-child{
+    border: 1px solid #000; /*entoure le sign up*/
+    padding: 10px 30px;
+    transition: 0.5s; /*donner leffet darriver */
+}
+.header_buttons a:last-child{
+    background-color: #000;
+    color: #fff;
+}
+
+/*classes*/
+.tittle{
+    text-transform: uppercase;  /*les mets en majuscule*/
+    font-size: 60px;   
+    letter-spacing: 2px;  
+    color: #5e493a;
+}
+p{
+    color: rgb(97, 96, 96);
+    margin: 20px 0;
+    letter-spacing: 2px;
+    font-size: 13px; /*groseur des lettres */
+    line-height: 25px;
+}
+
+/*home*/
+.home{
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100vh -80px);
+    width: 100%;
+}
+.home__left{
+    width: 35px;
+}
+.home__right{
+    width: 60%;
+}
+.home__right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.home_button {
+    cursor: pointer;
+    padding: 10px 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: 0 0 8px rgba(0, 0, 0,0, 1);
+    background-color: transparent;
+}
+.bouttons{
+    border: 1px solid #000;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 1);
+     font-size: 14px;
+     padding: 15px;
+     text-transform: uppercase;
+     background-color: transparent;
+     transition: 0.5s ease-in-out;
+}
+.bouttons:hover{
+    background-color: #000;
+    color: #fff;
+}
+.home__abou-us{
+position: absolute;
+top: 100px;
+right: 8px;
+height: 100%;
+display:flex ;
+align-items: center;
+justify-content: center;
+height: 600px;
+flex-direction: column;
+background-color: #EAE2D2;
+transition: 0.3s ease-in-out;
+overflow: hidden;
+width: 0%;
+}
+.home__abou-us img{
+      height: 400px;
+      width: 400px;
+      object-fit: cover;
+}
+.home__button button:last-child {
+    margin-left: 15px;
+}
+.home__button button:last-child:focus .home__abou-us{
+    width: 52%;
+    border-left: 1px solid #5e493a;
+}
+.home__abou-us h1{
+    margin-bottom: 20px;
+    font-size: 35px;
+    color: #000;
+}
+
+/*home*/
+
+/*Best sales*/
+.best-sales{
+    padding: 20px 8%;
+}
+.best-sales__product{
+     margin-top: 45px;
+     display: grid;
+     grid-template-columns: repeat(7,1fr) ;
+     grid-template-rows: repeat(6,1fr);
+    grid-row: inherit;
+    height: 80vh;
+}
+.div1 {
+    grid-area: 1 /1 /6 / 3;
+   
+}
+.div2 {
+    grid-area: 2 /3 /7 / 5;
+   
+}
+.div3 {
+    grid-area: 1 /5 /7 / 6;
+    
+}
+.div4 {
+    grid-area: 1 /3 /2 / 5;
+    
+}
+.div5 {
+    grid-area: 6 /1 /7 / 3;
+    
+}
+.div6 {
+    grid-area: 1 /6 /6 / 8;
+    
+}
+.div7 {
+    grid-area: 6 /6 /7 / 8;
+    
+}
+.best-sales__product div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%); /*les font devenir gris*/
+    transition: 0.5s ease-out;
+}
+.best-sales__product div img:hover{
+    filter: grayscale(0);  /*quand je passe sur les photo il redevienne en couleur */
+}
+
+.best-sales__product span{  
+    color: #5e493a;
+    text-transform: uppercase;
+     letter-spacing: 2px;
+     font-size: 20px;
+}
+.div5, .div4, .div7, .div3{
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.div3{
+    width: 170px;
+    background-color: black;
+}
+.div3 span{
+    transform: rotate(-90deg);/*retourner le mot fashion*/
+    color: #fff;
+    font-size: 60px;
+}
+/*Best sales*/
+
+/*img section*/
+
+.img-section {
+    padding: 20px 8%;
+    width: 100ù;
+}
+.img-section__content {
+    width: 100%;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0); /* le 2 a la fin,  fais en sorte 2D*/
+}
+.img-section h1 {
+    text-align: right ;
+    margin: 35px 0;
+}
+.img-section img{ /*a permit de remmetre limage dans le box*/
+    width: 100%;
+    transition: 0.5s;
+    filter: grayscale(100);
+}
+.img-section img:hover{
+    filter: grayscale(0);
+}
+.img-section__content p {
+    text-align: center;
+    border: 1px solid #000;
+    padding: 20px;
+    margin: 0;
+    margin-top: 20px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 2);  /* le 2 fais en sorte 2D*/
+}
+/*img section*/
+/*footer*/
+footer{
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    grid-template-rows: repeat(3,1fr); /*en remplacer par rows par colums ca remis le footer en place */
+    grid-column-gap:35px ;
+    grid-row-gap: 0px;
+    padding: 35px 8%;
+    margin-top: 35px;
+    text-transform: uppercase;
+}
+.col1{
+    grid-area: 1 / 1 / 4 /4;
+   
+}
+.col2{
+    grid-area: 1 / 4 / 4 /6;
+  
+}
+.col3{
+    grid-area: 1 / 6 / 4 /8;
+    
+}
+.col4{
+    grid-area: 1 / 8 / 4 /10;
+  
+}
+.col2 , .col3 {
+    display: flex;
+    flex-direction: column; /*les mets en colonne*/
+}
+
+.footer__newletter {
+    border: 1px solid #000 ;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 1);
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.footer__newletter input {
+    width: 75%;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+}
+.footer__newlette button {
+    background-color: transparent ;
+    width: 76px;
+    height:100% ;
+    border: 0;
+    transition: 0.5 ;
+    cursor: pointer;
+}
+.footer__newlette button:hover {
+    font-weight: bold;
+}
+.icons {
+    display: flex;
+}
+.icons i {
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    margin-right: 20px;
+    font-size: 14px;
+    border-radius: 50%;  /*arrondi le border */
+    transition: 0.5s ease-out;
+}
+.icons i:hover{
+    background-color: #000;
+    color: #fff;
+}
+.small_title {
+    padding: 10px 0;
+    border-bottom: 1px solid #000;
+}
+.col2 a , .col3 a{
+    margin:5px 0 ;
+    transition: 0.5s ease-out;
+}
+.col2 a:hover , .col3 a:hover{
+    font-weight: 500;
+}
+.col4 button{
+    border: 1px solid #000;
+    height: 150px;
+    width: 150px;
+    background-color: transparent;
+    border-radius: 50%;
+    text-transform: uppercase;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+.col4 button:hover {
+    background-color: #000;
+    color: #fff;
+}
